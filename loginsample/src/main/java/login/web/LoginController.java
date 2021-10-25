@@ -1,4 +1,4 @@
-package login.controller;
+package login.web;
 
 import login.data.UserRepositoryImpl;
 import login.domain.LoginService;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.request.WebRequest;
 
 @Controller
-public class FrontController {
+public class LoginController {
 
     private LoginService loginService = new LoginService(new UserRepositoryImpl());
 
