@@ -6,7 +6,9 @@ The web app illustrates the use of session object (WebRequest.SCOPE_SESSION) to 
 
 The disadvantage of stateless protocols is that they may decrease network performance by increasing the repetitive data sent in a series of requests, since that data cannot be left on the server and reused.
   </p> 
-  - [Source; wiki](https://en.wikipedia.org/wiki/Stateless_protocol) om Git
+  [wiki](https://en.wikipedia.org/wiki/Stateless_protocol)
+
+ddddd
 
 
 ![](img/ServiceLayerSketch.gif)
