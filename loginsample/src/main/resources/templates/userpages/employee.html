@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee page</title>
+</head>
+<body>
+<h1>Welcome - you are now logged in as employee</h1>
+
+<td>
+    <p th:text="${session.user.email}" th:unless="${session == null}">[...]</p>
+</td>
+<td> Oops - password is displayed!!!
+    <p th:text="${session.user.password}" th:unless="${session == null}">[...]</p>
+</td>
+<span th:text="${error}"></span>
+</body>
+</html>
