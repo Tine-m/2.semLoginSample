@@ -47,7 +47,7 @@ If an SQLException occurs in the repository class, it is tranformed into a user 
 
 ```java
  catch (SQLException ex) {
-            throw new LoginSampleException(ex.getMessage());
+     throw new LoginSampleException(ex.getMessage());
  }
  ```
 
