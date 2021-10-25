@@ -15,9 +15,15 @@ Session provides a way to identify a user across more than one page request and 
 <p>
   
  ## Logical architecture
-  The app is build as a three layered architecture
+  The app is build as a three layered architecture with a 
+  
+  - presentation layer consisting of @Controller in web package (C of MVC) and html pages (view in MVC) in resources/templates
+  - domain layer consisting of service class LoginService (aka GRASP controller handling a use cases) and domain class User
+  - data layer consisting of DataManager and UserRepository (interface and implementations)
+  
+  bla
+![](img/all_more.png)
 
 ![](img/ServiceLayerSketch.gif)
 
-bla
-![](img/all_more.png)
+
