@@ -43,7 +43,7 @@ public class LoginSampleException extends Exception {
 }
 ```
 
-In Spring @Controller is is automatically caught and handled with @ExceptionHandler annotation:
+In a Spring @Controller, the exception is is automatically caught and handled with @ExceptionHandler annotation:
 
 ```java
 @ExceptionHandler(LoginSampleException.class)
