@@ -8,8 +8,9 @@ The disadvantage of stateless protocols is that they may decrease network perfor
   </p> 
   [wiki](https://en.wikipedia.org/wiki/Stateless_protocol)
 
-ddddd
-
+<p>
+Session provides a way to identify a user across more than one page request and to store information about <i>that</i> user. The session object is automatically created by Spring Framework, but you must provide it with whatever data the app needs for a speficic client. For instance user identification or items in a shopping cart in web shop.
+<p>
 
 ![](img/ServiceLayerSketch.gif)
 
