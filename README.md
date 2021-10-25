@@ -6,4 +6,4 @@ bla
 ![](img/ServiceLayerSketch.gif)
 
 bla
-![](all-more.png)
+![](img/all-more.png)
