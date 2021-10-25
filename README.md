@@ -32,6 +32,7 @@ Be careful not to store large and unnecessary object graphs to overburden the se
  <p> A service layer defines the application set of available operations from the perspective of client interface (presentation layyer). A MVC @Controller has a service class as its first contact point in the backend part of the application. 
    <br>The service layer encapsulates the application's business logic, it controls transactions and coordinates responses when an alternative use case scenario is encountered. It can be illustrated like this: </p>
  https://martinfowler.com/eaaCatalog/serviceLayer.html
+ 
 ![](img/ServiceLayerSketch.gif)
 
 ## Exception handling
