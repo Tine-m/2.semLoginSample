@@ -19,7 +19,7 @@ Be careful not to store large and unnecessary object graphs to overburden the se
   The app is build as a three layered architecture that follows this illustration https://martinfowler.com/bliki/PresentationDomainDataLayering.html:  
   ![](img/all_more.png)
   
-  The app has:
+  The application has:
   
   - presentation layer consisting of @Controller in web package (C of MVC) and html pages (view in MVC) in resources/templates.
   - domain layer consisting of service class LoginService (aka GRASP controller handling a use cases) and domain class User.
@@ -30,4 +30,26 @@ Be careful not to store large and unnecessary object graphs to overburden the se
  https://martinfowler.com/eaaCatalog/serviceLayer.html
 ![](img/ServiceLayerSketch.gif)
 
+## Exception handling
+
+The application uses its own Exception type to avoid SQL Exceptions to propagate into other architectural layers.
+
+```java
+public class LoginSampleException extends Exception {
+
+    public LoginSampleException(String msg) {
+        super(msg);
+    }
+}
+```
+
+In Spring @Controller is is automatically caught and handled with @ExceptionHandler annotation:
+
+```java
+@ExceptionHandler(LoginSampleException.class)
+    public String handleError(Model model, Exception exception) {
+        model.addAttribute("message",exception.getMessage());
+        return "exceptionPage";
+    }
+```
 
