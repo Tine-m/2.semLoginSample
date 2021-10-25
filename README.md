@@ -42,6 +42,13 @@ public class LoginSampleException extends Exception {
     }
 }
 ```
+If an SQLException occur it is tranformed into a user type exception:
+
+```java
+ catch (SQLException ex) {
+            throw new LoginSampleException(ex.getMessage());
+   }
+        ```
 
 In a Spring @Controller, the exception is is automatically caught and handled with @ExceptionHandler annotation:
 
