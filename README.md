@@ -16,7 +16,7 @@ Session object provides a way to identify a user across more than one page reque
 Be careful not to store large and unnecessary object graphs to overburden the server. It impacts scalability.
   
  ## Logical architecture
-  The app is build as a three layered architecture that follows this illustration (Martin Fowler) https://martinfowler.com/bliki/PresentationDomainDataLayering.html:  
+  The app is build as a three layered architecture that follows this illustration https://martinfowler.com/bliki/PresentationDomainDataLayering.html:  
   ![](img/all_more.png)
   
   The app has:
@@ -25,10 +25,9 @@ Be careful not to store large and unnecessary object graphs to overburden the se
   - domain layer consisting of service class LoginService (aka GRASP controller handling a use cases) and domain class User.
   - data layer consisting of DataManager and UserRepository (interface and implementations).
  
-
-
- <p>A Service Layer defines an application's interface and its set of available operations from the perspective of client p+ersentation layer. MVC @Controller has a service class as its first contact point in backend part of the application. The service layer encapsulates the application's business logic, it controls transactions and coordinates responses when an alternative use case scenario is encountered. It can be illustrated like this: </p>
- 
+ <p> A service layer defines the application set of available operations from the perspective of client interface (presentation layyer). A MVC @Controller has a service class as its first contact point in the backend part of the application. 
+   <br>The service layer encapsulates the application's business logic, it controls transactions and coordinates responses when an alternative use case scenario is encountered. It can be illustrated like this: </p>
+ https://martinfowler.com/eaaCatalog/serviceLayer.html
 ![](img/ServiceLayerSketch.gif)
 
 
