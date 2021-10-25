@@ -25,7 +25,7 @@ Be careful not to store large and unnecessary object graphs to overburden the se
   - domain layer consisting of service class LoginService (aka GRASP controller handling a use cases) and domain class User.
   - data layer consisting of DataManager and UserRepository (interface and implementations). A repository mediates between the domain and data mapping layer.
   
-  <p>The package naming looks like this (where service and domain classes are in the same package):</p>
+  <p>The package naming looks like this (where service and domain model classes are in the same domain package):</p>
   
   ![](img/Udklip.PNG)
  
