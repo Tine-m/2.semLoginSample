@@ -48,7 +48,6 @@ public class LoginController {
         if (password1.equals(password2)) {
             User user = loginService.createUser(email, password1);
             request.setAttribute("user", user, WebRequest.SCOPE_SESSION);
-            request.setAttribute("role", user.getRole(), WebRequest.SCOPE_SESSION);
 
             // Go to page dependent on role
             return "userpages/" + user.getRole();
@@ -72,7 +71,7 @@ public class LoginController {
             return "redirect:/";
     }
 
-    @ExceptionHandler(Exception.class)
+    @ExceptionHandler(LoginSampleException.class)
     public String handleError(Model model, Exception exception) {
         model.addAttribute("message",exception.getMessage());
         return "exceptionPage";
