@@ -24,10 +24,15 @@ Be careful not to store large and unnecessary object graphs to overburden the se
   - presentation layer consisting of @Controller in web package (C of MVC) and html pages (view in MVC) in resources/templates.
   - domain layer consisting of service class LoginService (aka GRASP controller handling a use cases) and domain class User.
   - data layer consisting of DataManager and UserRepository (interface and implementations). A repository mediates between the domain and data mapping layer.
+  
+  <p>The package naming looks like this (where service and domain model classes are in the same domain package):</p>
+  
+  ![](img/Udklip.PNG)
  
  <p> A service layer defines the application set of available operations from the perspective of client interface (presentation layyer). A MVC @Controller has a service class as its first contact point in the backend part of the application. 
    <br>The service layer encapsulates the application's business logic, it controls transactions and coordinates responses when an alternative use case scenario is encountered. It can be illustrated like this: </p>
  https://martinfowler.com/eaaCatalog/serviceLayer.html
+ 
 ![](img/ServiceLayerSketch.gif)
 
 ## Exception handling
