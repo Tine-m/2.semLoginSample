@@ -4,6 +4,7 @@ import login.repositories.UserRepositoryImpl;
 import login.domain.services.LoginService;
 import login.domain.LoginSampleException;
 import login.domain.models.User;
+import login.repositories.UserRepositoryStub;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -11,10 +12,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.request.WebRequest;
 
+import java.util.ArrayList;
+
 @Controller
 public class LoginController {
-
-    private LoginService loginService = new LoginService(new UserRepositoryImpl());
+ 
+    //Inversion of Control
+    private LoginService loginService = new LoginService(new UserRepositoryStub());
 
     @GetMapping("/")
     public String getHome() {

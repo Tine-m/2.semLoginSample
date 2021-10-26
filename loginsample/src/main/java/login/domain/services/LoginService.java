@@ -3,11 +3,14 @@ package login.domain.services;
 import login.repositories.UserRepository;
 import login.domain.LoginSampleException;
 import login.domain.models.User;
+import login.repositories.UserRepositoryImpl;
 
+//AKA GRASP Controller
 public class LoginService {
 
     private UserRepository userRepository = null;
 
+    // Dependency injection
     public LoginService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
