@@ -1,7 +1,7 @@
-package login.data;
+package login.repositories;
 
 import login.domain.LoginSampleException;
-import login.domain.User;
+import login.domain.models.User;
 import java.sql.*;
 
 public class UserRepositoryImpl implements UserRepository {

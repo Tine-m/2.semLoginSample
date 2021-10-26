@@ -1,9 +1,9 @@
 package login.web;
 
-import login.data.UserRepositoryImpl;
-import login.domain.LoginService;
+import login.repositories.UserRepositoryImpl;
+import login.domain.services.LoginService;
 import login.domain.LoginSampleException;
-import login.domain.User;
+import login.domain.models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;

@@ -1,4 +1,4 @@
-package login.domain;
+package login.domain.models;
 
 public class User {
     public User(String email, String password, String role) {

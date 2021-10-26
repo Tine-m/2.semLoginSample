@@ -1,4 +1,4 @@
-package login.data;
+package login.repositories;
 
 import java.io.FileInputStream;
 import java.io.IOException;

@@ -1,6 +1,8 @@
-package login.domain;
+package login.domain.services;
 
-import login.data.UserRepository;
+import login.repositories.UserRepository;
+import login.domain.LoginSampleException;
+import login.domain.models.User;
 
 public class LoginService {
 
