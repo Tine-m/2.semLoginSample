@@ -27,4 +27,25 @@ class UserRepositoryTest {
         assertThrows(LoginSampleException.class, () -> userRepo.login("someone@nowhere.com", "1234"));
     }
 
+    @Test
+    public void createUser_GivenCorrectUserInfo () throws LoginSampleException {
+        //Arrange
+        UserRepository userRepo = new UserRepositoryImpl();
+        User user = new User("tine@kea.dk", "tine", "customer");
+        //Act
+        User newUser = userRepo.createUser(user);
+        assertTrue(user.getId() != 0);
+    }
+
+    @Test
+    public void createUser_EmailExistingAlready_ShouldThrowException() throws LoginSampleException {
+        //Arrange
+        UserRepository userRepo = new UserRepositoryImpl();
+        User user1 = new User("tine1@kea.dk", "tine", "customer");
+        User user2 = new User("tine1@kea.dk", "tine", "customer");
+        //Act
+        userRepo.createUser(user1);
+        assertThrows(LoginSampleException.class, () -> userRepo.createUser(user2));
+    }
+
 }
