@@ -10,8 +10,11 @@ class UserRepositoryTest {
 
     @Test
     public void login_GivenCorrectCredentials () throws LoginSampleException {
+        // Arrange
         UserRepository userRepo = new UserRepositoryImpl();
+        //Act
         User user = userRepo.login("someone@nowhere.com", "sesam");
+        //Assert
         assertNotNull(user);
     }
 
@@ -34,6 +37,7 @@ class UserRepositoryTest {
         User user = new User("tine@kea.dk", "tine", "customer");
         //Act
         User newUser = userRepo.createUser(user);
+        //Assert
         assertTrue(user.getId() != 0);
     }
 
@@ -45,6 +49,7 @@ class UserRepositoryTest {
         User user2 = new User("tine1@kea.dk", "tine", "customer");
         //Act
         userRepo.createUser(user1);
+        //Assert
         assertThrows(LoginSampleException.class, () -> userRepo.createUser(user2));
     }
 

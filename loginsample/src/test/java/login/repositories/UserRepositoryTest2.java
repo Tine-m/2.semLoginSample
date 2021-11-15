@@ -33,10 +33,11 @@ public class UserRepositoryTest2 {
         User user = new User("tine@kea.dk", "tine", "customer");
         //Act
         User newUser = userRepo.createUser(user);
+        //Assert
         assertTrue(user.getId() != 0);
         assertEquals("tine@kea.dk",user.getEmail());
         assertEquals("tine",user.getPassword());
-        // The following is dependent on other method
+        // The following is dependent on login method for "table dump"
         //User userDB = userRepo.login("tine@kea.dk", "tine");
         //assertNotNull(userDB);
     }
