@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserRepositoryTest {
 
     @Test
-    public void login_GivenCorrectCredentials_ShouldSucceed () throws LoginSampleException {
+    public void login_GivenCorrectCredentials () throws LoginSampleException {
         UserRepository userRepo = new UserRepositoryImpl();
         User user = userRepo.login("someone@nowhere.com", "sesam");
         assertNotNull(user);
