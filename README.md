@@ -1,5 +1,8 @@
 # 2.semLoginSample
 
+## Test automation
+See testautomation branch for test examples.
+
 ## Http protocol is stateless
 The web app illustrates the use of session object (WebRequest.SCOPE_SESSION) to hold user object after login/user registration. The Http protocol is by nature stateless, meaning that the web server does not keep session state from previous requests by the client (browser). This has a number of advantages:
 <p>
