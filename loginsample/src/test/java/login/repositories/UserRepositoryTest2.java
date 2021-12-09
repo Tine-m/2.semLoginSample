@@ -36,9 +36,6 @@ public class UserRepositoryTest2 {
         assertTrue(user.getId() != 0);
         assertEquals("tine@kea.dk",newUser.getEmail());
         assertEquals("tine",newUser.getPassword());
-        // The following is dependent on login method for "table dump"
-        //User userDB = userRepo.login("tine@kea.dk", "tine");
-        //assertNotNull(userDB);
     }
 
 }
