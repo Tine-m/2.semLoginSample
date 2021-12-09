@@ -34,8 +34,8 @@ public class UserRepositoryTest2 {
         User newUser = userRepo.createUser(user);
         //Assert
         assertTrue(user.getId() != 0);
-        assertEquals("tine@kea.dk",user.getEmail());
-        assertEquals("tine",user.getPassword());
+        assertEquals("tine@kea.dk",newUser.getEmail());
+        assertEquals("tine",newUser.getPassword());
         // The following is dependent on login method for "table dump"
         //User userDB = userRepo.login("tine@kea.dk", "tine");
         //assertNotNull(userDB);

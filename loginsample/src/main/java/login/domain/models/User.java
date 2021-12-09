@@ -1,16 +1,17 @@
 package login.domain.models;
 
 public class User {
-    public User(String email, String password, String role) {
-        this.email = email;
-        this.password = password;
-        this.role = role;
-    }
 
     private int id;
     private String email;
     private String password; // Should be hashed and secured
     private String role;
+
+    public User(String email, String password, String role) {
+        this.email = email;
+        this.password = password;
+        this.role = role;
+    }
 
      public String getEmail() {
         return email;
