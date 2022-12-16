@@ -1,6 +1,6 @@
 package login.repositories;
 
-import java.io.FileInputStream;
+import org.springframework.core.io.ClassPathResource;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -16,7 +16,7 @@ public class DBManager {
 
     public static Connection getConnection(){
         if (connection != null) return connection;
-        try (InputStream input = new FileInputStream("src/main/resources/application.properties")) {
+        try (InputStream input = new ClassPathResource("application.properties").getInputStream()) {
             Properties properties = new Properties();
             properties.load(input);
             url = properties.getProperty("url");

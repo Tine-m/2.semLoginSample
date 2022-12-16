@@ -12,13 +12,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.request.WebRequest;
 
-import java.util.ArrayList;
-
 @Controller
 public class LoginController {
  
     //Inversion of Control
-    private LoginService loginService = new LoginService(new UserRepositoryStub());
+    private LoginService loginService = new LoginService(new UserRepositoryImpl());
 
     @GetMapping("/")
     public String getHome() {
