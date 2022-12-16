@@ -1,10 +1,9 @@
-package login.web;
+package login.webUI;
 
 import login.repositories.UserRepositoryImpl;
 import login.domain.services.LoginService;
 import login.domain.LoginSampleException;
 import login.domain.models.User;
-import login.repositories.UserRepositoryStub;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
