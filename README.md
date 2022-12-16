@@ -1,5 +1,8 @@
 # 2.semLoginSample
 
+## application.properties: database info
+Rename application.properties.example filename to application.properties to make program work.
+
 ## Test automation
 See testautomation branch for test examples.
 
